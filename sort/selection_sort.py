@@ -8,6 +8,4 @@ def selection_sort(values):
             if values[smaller] > values[j]:
                 smaller = j
 
-        tmp = values[i]
-        values[i] = values[smaller]
-        values[smaller] = tmp
+        values[i], values[smaller] = values[smaller], values[i]
