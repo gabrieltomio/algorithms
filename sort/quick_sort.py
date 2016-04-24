@@ -6,11 +6,12 @@ def quick_sort(values):
 
     left, right = [], []
 
-    for value in values[:mid] + values[mid + 1:]:
-        if value < values[mid]:
-            left.append(value)
-        else:
-            right.append(value)
+    for i in range(values):
+        if i != mid:
+            if values[i] < values[mid]:
+                left.append(values[i])
+            else:
+                right.append(values[i])
 
     return quick_sort(left) + [values[mid]] + quick_sort(right)
 
